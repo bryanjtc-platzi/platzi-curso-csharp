@@ -1,5 +1,5 @@
 using static System.Console;
-
+using System.Runtime.Versioning;
 namespace CoreEscuela.Util
 {
     public static class Printer
@@ -17,6 +17,7 @@ namespace CoreEscuela.Util
             DrawLine(tamaño);
         }
 
+        [SupportedOSPlatform("windows")]
         public static void Beep(int hz = 2000, int tiempo=500, int cantidad =1)
         {
             while (cantidad-- > 0)
